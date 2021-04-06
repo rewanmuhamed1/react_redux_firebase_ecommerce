@@ -36,7 +36,7 @@ const CartItem = (props) => {
 
             <div className="col m2 ">
                 <div className="cart-img ">
-                    <img src={'/images/'+product.images} alt="" style={{ height: "60%", width: "60%" }} />
+                    <img src={'images/'+product.images} alt="" style={{ height: "60%", width: "60%" }} />
                 </div>
             </div>
             <div className="col m6 ">

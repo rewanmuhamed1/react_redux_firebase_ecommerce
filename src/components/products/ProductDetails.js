@@ -31,7 +31,7 @@ class ProductDetails extends Component {
                 <div className="row">
                     <div className="col s5 ">
                         <div className="cart-img ">
-                            <img src={"/images/" + product.images} alt="" style={{}} />
+                            <img src={"images/" + product.images} alt="" style={{}} />
                         </div>
                     </div>
                     <div className="col s7 ">
