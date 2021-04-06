@@ -17,7 +17,7 @@ const ProductItem = (props) => {
             <div className="card">
                 <div className="card-image">
                 <Link to={'/product/' + product.id} key={product.id}>
-                    <img src={"/images/"+product.images} alt="" />
+                    <img src={"images/"+product.images} alt="" />
                     <h3 className="card-title">{product.title}</h3>
                     <h4>{ formatMoney(parseFloat(product.price) ) }$</h4>
                     </Link>
