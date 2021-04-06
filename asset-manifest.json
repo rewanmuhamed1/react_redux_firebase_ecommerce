@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react_redux_firebase_ecommerce/static/css/main.3034a6bb.chunk.css",
-    "main.js": "/react_redux_firebase_ecommerce/static/js/main.b3311512.chunk.js",
-    "main.js.map": "/react_redux_firebase_ecommerce/static/js/main.b3311512.chunk.js.map",
+    "main.js": "/react_redux_firebase_ecommerce/static/js/main.a210d0e3.chunk.js",
+    "main.js.map": "/react_redux_firebase_ecommerce/static/js/main.a210d0e3.chunk.js.map",
     "runtime-main.js": "/react_redux_firebase_ecommerce/static/js/runtime-main.be20ac8d.js",
     "runtime-main.js.map": "/react_redux_firebase_ecommerce/static/js/runtime-main.be20ac8d.js.map",
     "static/js/2.d90bab7c.chunk.js": "/react_redux_firebase_ecommerce/static/js/2.d90bab7c.chunk.js",
     "static/js/2.d90bab7c.chunk.js.map": "/react_redux_firebase_ecommerce/static/js/2.d90bab7c.chunk.js.map",
     "index.html": "/react_redux_firebase_ecommerce/index.html",
-    "precache-manifest.bf13c385a7fc23f3e5f31ef91378ac57.js": "/react_redux_firebase_ecommerce/precache-manifest.bf13c385a7fc23f3e5f31ef91378ac57.js",
+    "precache-manifest.21c9186177ade6e9b8832867a049bfd3.js": "/react_redux_firebase_ecommerce/precache-manifest.21c9186177ade6e9b8832867a049bfd3.js",
     "service-worker.js": "/react_redux_firebase_ecommerce/service-worker.js",
     "static/css/main.3034a6bb.chunk.css.map": "/react_redux_firebase_ecommerce/static/css/main.3034a6bb.chunk.css.map",
     "static/js/2.d90bab7c.chunk.js.LICENSE.txt": "/react_redux_firebase_ecommerce/static/js/2.d90bab7c.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.be20ac8d.js",
     "static/js/2.d90bab7c.chunk.js",
     "static/css/main.3034a6bb.chunk.css",
-    "static/js/main.b3311512.chunk.js"
+    "static/js/main.a210d0e3.chunk.js"
   ]
 }
