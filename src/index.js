@@ -40,7 +40,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
-        <BrowserRouter>
+        <BrowserRouter basename="/react_redux_firebase_ecommerce/">
           <AuthIsLoaded>
             <App />
           </AuthIsLoaded>
