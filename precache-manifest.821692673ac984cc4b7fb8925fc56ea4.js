@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "66472bbe97e91d292e0751ac4851aff9",
+    "revision": "95b5a913c2f2c9ad7ee43992cec0cb93",
     "url": "/react_redux_firebase_ecommerce/index.html"
   },
   {
-    "revision": "55dfcc479f21681f1ae4",
+    "revision": "562480596d86a30397c5",
     "url": "/react_redux_firebase_ecommerce/static/css/main.3034a6bb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react_redux_firebase_ecommerce/static/js/2.d90bab7c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "55dfcc479f21681f1ae4",
-    "url": "/react_redux_firebase_ecommerce/static/js/main.a210d0e3.chunk.js"
+    "revision": "562480596d86a30397c5",
+    "url": "/react_redux_firebase_ecommerce/static/js/main.8f78439d.chunk.js"
   },
   {
     "revision": "27bd4d03038f9c693243",
