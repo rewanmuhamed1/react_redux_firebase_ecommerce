@@ -17,9 +17,10 @@ export const dashboardProduct  = (productId) => {
 export const editProduct  = (product) => {
   return (dispatch, getState ) => {
    // make async call to database
+   console.log("actions edit product",product);
    firebase
   .firestore()
-  .collection('products').doc(product.id).set({
+  .collection('products').doc(product.id).update({
     ...product,
     authorFirstName: 'Net',
     authorLastName: 'Ninja',

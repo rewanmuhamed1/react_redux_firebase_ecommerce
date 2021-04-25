@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { createProduct } from '../../store/actions/productActions'
 import { connect } from 'react-redux'
-import {getbrands } from '../../store/actions/brandActions'
+import { getbrands } from '../../store/actions/brandActions'
+import { storage } from "../../config/fbConfig";
 
 class AddProduct extends Component {
     state = {
@@ -22,18 +23,22 @@ class AddProduct extends Component {
             description: ''
         },
         categories: ['phones', 'tablets'],
-        brands: []
+        brands: [],
+image:''
 
     };
 
     handleChange = (e) => {
-        
+
 
         if (e.target.id == "images") {
-            console.log(e.target.files[0].name);
-            this.setState({
-                product: { ...this.state.product, [e.target.id]: e.target.files[0].name }
-            })
+             console.log(e.target.files[0]);
+
+           
+              this.setState({
+                  image: e.target.files[0] 
+             }) 
+            
         }
         else {
             this.setState({
@@ -44,8 +49,38 @@ class AddProduct extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-      //   console.log(this.state.product);
-        this.props.createProduct(this.state.product);
+        console.log(this.state.image);
+        
+        const uploadTask = storage.ref(`images/${this.state.image.name}`).put(this.state.image);
+        uploadTask.on(
+            "state_changed",
+            snapshot => {
+                const progress = Math.round(
+                    (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                );
+               
+            },
+            error => {
+                console.log(error);
+            },
+            () => {
+                storage
+                    .ref("images")
+                    .child(this.state.image.name)
+                    .getDownloadURL()
+                    .then(url => {
+                        console.log(url);
+                        this.setState({
+                            product: { ...this.state.product, images: url }
+                        });
+                        console.log("this.state.product.images" ,this.state.product.images );
+                        this.props.createProduct(this.state.product);
+                    });
+            }
+        );
+       
+        //   console.log(this.state.product);
+        
     }
 
 
@@ -60,9 +95,12 @@ class AddProduct extends Component {
 
     render() {
         const { brands } = this.props;
-        
+
         return (
             <div className="container">
+                {this.props.createProuduct ? (
+                    <div className="alert-addBrand" >Prouduct created successfuly</div>
+                ) : null}
                 <form className="white" onSubmit={this.handleSubmit}>
                     <h5 className="grey-text text-darken-3">Add Product</h5>
                     <div className="input-field">
@@ -147,14 +185,15 @@ class AddProduct extends Component {
 const mapStateToProps = (state) => {
     //console.log( "brands" , state.brand.brands  );
     return {
-        brands : state.brand.brands  
+        brands: state.brand.brands,
+        createProuduct: state.product.createProuduct
     }
-  }
+}
 
 const mapDispatchToProps = dispatch => {
     return {
         createProduct: (product) => dispatch(createProduct(product)),
-        getbrands : () => dispatch(getbrands())
+        getbrands: () => dispatch(getbrands())
     }
 }
 

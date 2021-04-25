@@ -10,3 +10,10 @@
     font-weight: 500;
     line-height: 1.2em;
 }
+
+@media only screen and (min-width: 993px)
+{
+    .container {
+        width: 80%;
+    }
+}

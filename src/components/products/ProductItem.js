@@ -17,7 +17,19 @@ const ProductItem = (props) => {
             <div className="card">
                 <div className="card-image">
                 <Link to={'/product/' + product.id} key={product.id}>
-                    <img src={"images/"+product.images} alt="" />
+                    {/* <img src={"/images/"+product.images} alt="" /> */}
+                    {/* <div className="img-container"><img src={product.images} alt="" /></div> */}
+                    <div
+  className="img-container"
+  style={{
+    width: 200,
+    height: 300,
+    backgroundImage: `url(${product.images })`,
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+  }}
+></div>
                     <h3 className="card-title">{product.title}</h3>
                     <h4>{ formatMoney(parseFloat(product.price) ) }$</h4>
                     </Link>
@@ -27,7 +39,8 @@ const ProductItem = (props) => {
                     </button>
                 </div>
                 <div className="card-content">
-                    <p>{product.description}</p>
+                {product.description.length > 50 ? <p>{product.description.substring(0,50)}...</p> : <p>{product.description}</p>}
+                    
                 </div>
             </div>
         </div>

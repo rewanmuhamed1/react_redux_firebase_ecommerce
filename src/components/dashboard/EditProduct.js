@@ -42,6 +42,7 @@ class EditProduct extends Component {
                     //id: doc.id,
                     product:
                     {
+                        id: doc.id,
                         title: board.title,
                         category: board.category,
                         images: board.images,
@@ -99,6 +100,9 @@ class EditProduct extends Component {
         const { brands } = this.props;
         return (
             <div className="container">
+                {this.props.updateProuduct ? (
+                                        <div className="alert-addBrand" >Prouduct updated successfuly</div>
+                                    ) : null }
                 <form className="white" onSubmit={this.handleSubmit}>
                     <h5 className="grey-text text-darken-3">Add Product</h5>
                     <div className="input-field">
@@ -171,7 +175,7 @@ class EditProduct extends Component {
                         <label htmlFor="description">Description</label>
                     </div>
                     <div className="input-field">
-                        <button className="btn pink lighten-1 z-depth-0">add</button>
+                        <button className="btn pink lighten-1 z-depth-0">edit</button>
                     </div>
                 </form>
             </div>
@@ -185,7 +189,8 @@ class EditProduct extends Component {
 const mapStateToProps = (state) => {
    // console.log( "brands" , state.brand.brands  );
     return {
-        brands : state.brand.brands  
+        brands : state.brand.brands ,
+        updateProuduct : state.dashboard.updateProuduct 
     }
   }
 
