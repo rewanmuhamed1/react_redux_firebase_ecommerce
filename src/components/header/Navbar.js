@@ -12,17 +12,8 @@ const Navbar = (props) => {
     return (
 
         <div>
-            <nav className="grey darken-3">
-
-                <div className="nav-wrapper">
-                    <div className="container">
-                        <Link to='/' className="brand-logo">Ecommerce</Link>
-                        <Link to="#" data-target="mobile-links" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
-                        {links}
-                    </div>
-                </div>
-            </nav>
-        
+            
+        {links}
 
 
         </div>

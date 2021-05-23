@@ -29,12 +29,12 @@ class ProductDetails extends Component {
             <div className="container section project-details">
 
                 <div className="row">
-                    <div className="col s5 ">
+                    <div className="col m5 s12 ">
                         <div className="cart-img ">
                             <img src={ product.images} alt="" style={{}} />
                         </div>
                     </div>
-                    <div className="col s7 ">
+                    <div className="col m7 s12">
                         <div className="cart-details">
                             <h4> {product.title} </h4>
                             <p>{product.description}</p>

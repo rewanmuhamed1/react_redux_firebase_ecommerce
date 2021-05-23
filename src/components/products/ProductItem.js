@@ -3,6 +3,8 @@ import { addProductToCart } from '../../store/actions/cartActions'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import {formatMoney} from "../../pipes/priceFormatter";
+import './productItem.css'
+
 
 const ProductItem = (props) => {
     const { product } = props;
@@ -13,7 +15,7 @@ const ProductItem = (props) => {
     }
 
     return (
-        <div className="col s12 m4">
+        <div className="col s12 m6 l4">
             <div className="card">
                 <div className="card-image">
                 <Link to={'/product/' + product.id} key={product.id}>

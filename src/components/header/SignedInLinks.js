@@ -7,15 +7,25 @@ import { signOut } from '../../store/actions/authActions'
 const SignedInLinks = (props) => {
     return (
         <div>
-            <Link to="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
+            <nav className="nav-wrapper grey darken-3">
 
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-                <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
-                <li><a href="#" onClick={props.signOut}>Log Out</a></li>
-                <li><NavLink to='/cart' ><i className="medium material-icons cart-icon " > add_shopping_cart </i><span className="count-cart-icon"> {props.allQuantity} </span></NavLink></li>
-            </ul>
+               
+                    <div className="container">
+                        <Link to='/' className="brand-logo left">Ecommerce</Link>
+                       {/*  <Link to="#" data-target="mobile-links" className="sidenav-trigger"><i className="material-icons">menu</i></Link> */}
+                        <ul  className="right ">
+                            <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                            <li><a href="#" onClick={props.signOut}>Log Out</a></li>
+                            <li><NavLink to='/cart' ><i className="medium material-icons cart-icon " > add_shopping_cart </i><span className="count-cart-icon"> {props.allQuantity} </span></NavLink></li>
+                        </ul>
+                    </div>
+            
+            </nav>
 
-            <ul className="sidenav" id="mobile-demo">
+
+
+
+            <ul className="sidenav" id="mobile-links">
                 <li><NavLink to='/dashboard'> Dashboard </NavLink></li>
                 <li><a href="#" onClick={props.signOut}>Log Out</a></li>
                 <li><NavLink to='/cart' ><i className="medium material-icons cart-icon" > add_shopping_cart </i><span className="count-cart-icon" > {props.allQuantity} </span></NavLink></li>

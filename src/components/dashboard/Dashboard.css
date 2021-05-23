@@ -14,3 +14,12 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 {
     margin: 0 0 8px 90px;
 }
+
+.btn-flat
+{
+  color: #ff0000;
+}
+.btn-flat i
+{
+  font-size: 2rem;
+}

@@ -45,7 +45,7 @@ const ProductAdminList = (props) => {
                     <Link to={'/dashboard/editproduct/' + product.id} key={i} className="edit" title="" data-toggle="tooltip" data-original-title="Edit">
                       <i className="material-icons"></i>
                     </Link>
-                    <button className="delete" title="" data-toggle="tooltip" data-original-title="Delete" onClick={(e) => deleteProductClick(e, product.id)} ><i className="material-icons"></i></button >
+                    <button className="delete btn-flat" title="" data-toggle="tooltip" data-original-title="Delete" onClick={(e) => deleteProductClick(e, product.id)} ><i className="material-icons"></i></button >
                   </td>
                 </tr>
 
