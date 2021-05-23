@@ -2,11 +2,11 @@
 - npm install
 - npm start
 
-![](screenshot images/ecommerce1.PNG)
+![](screenshotImages/ecommerce1.PNG)
 
 ### admin login
 
-![](screenshot images/ecommerce2.PNG)
-![](screenshot images/ecommerce3.PNG)
-![](screenshot images/ecommerce4.PNG)
-![](screenshot images/ecommerce5.PNG)
+![](screenshotImages/ecommerce2.PNG)
+![](screenshotImages/ecommerce3.PNG)
+![](screenshotImages/ecommerce4.PNG)
+![](screenshotImages/ecommerce5.PNG)
